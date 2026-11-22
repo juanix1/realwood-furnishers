@@ -124,3 +124,6 @@ src/
   types/           index.ts, payments.ts
 supabase/migrations/   SQL schema + RLS + storage
 ```
+=======
+# realwood-furnishers
+>>>>>>> 334dcee2f5941d197af63fdaa81f306125ff823f
