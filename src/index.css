@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream-50 font-sans text-charcoal-800 antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-charcoal-900;
+  }
+  ::selection {
+    background: #d4af37;
+    color: #181715;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .section {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .btn,
+  .btn-primary,
+  .btn-gold,
+  .btn-outline,
+  .btn-dark,
+  .btn-light {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-primary {
+    @apply bg-wood text-white hover:bg-wood-dark;
+  }
+  .btn-gold {
+    @apply bg-gold text-charcoal-900 hover:bg-gold-dark;
+  }
+  .btn-dark {
+    @apply bg-charcoal-900 text-white hover:bg-charcoal-700;
+  }
+  .btn-light {
+    @apply bg-white text-charcoal-900 hover:bg-cream-100;
+  }
+  .btn-outline {
+    @apply border border-charcoal-900/20 bg-transparent text-charcoal-900 hover:border-wood hover:text-wood;
+  }
+
+  .input {
+    @apply w-full rounded-xl border border-charcoal-400/30 bg-white px-4 py-3 text-sm text-charcoal-900 placeholder:text-charcoal-400 focus:border-wood focus:outline-none focus:ring-2 focus:ring-wood/20 disabled:bg-cream-100;
+  }
+  .label {
+    @apply mb-1.5 block text-sm font-medium text-charcoal-800;
+  }
+  .card {
+    @apply rounded-2xl border border-cream-200 bg-white shadow-sm;
+  }
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.2em] text-wood;
+  }
+}
+
+.wood-grain {
+  background-color: #efe8d8;
+  background-image: repeating-linear-gradient(
+      100deg,
+      rgba(139, 90, 43, 0.07) 0px,
+      rgba(139, 90, 43, 0.07) 2px,
+      transparent 2px,
+      transparent 14px
+    ),
+    linear-gradient(135deg, #f8f4ec 0%, #efe8d8 100%);
+}
